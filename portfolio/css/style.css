@@ -1,0 +1,129 @@
+html {
+  color: #000;
+  background-color: #ffffff;
+  font-size: 0.625em; /* ブラウザ標準ベースで10pxとなり、ルート設定となる*/
+  font-family:"Noto Sans Japanese"  ;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 1.6rem; /* 10px * 1.6 = 16px */
+}
+/*ナビ*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 20px auto 20px auto;
+  align-items: baseline;
+}
+
+nav a {
+  margin: 0 auto ;
+  transition: opacity 1s ease;
+}
+
+
+/*ナビのMyProfile*/
+h1 {
+  border: 1px solid black;
+  margin: auto 20px;
+  padding: 10px 30px;
+  transition: opacity 1s ease;
+}
+
+/*メイン画像*/
+.carouselImg {
+  width: 100%;
+}
+
+h2 {
+ width: 100%;
+ margin: 40px;
+  font-size: 34px;
+ font-weight: bold;
+ text-align: center;
+}
+
+/*About*/
+section:has(#about) {
+  container-type: inline-size;
+}
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#about img {
+  border: 3px solid #999;
+  border-radius: 150px ;
+  padding: 3px;
+}
+
+#about p {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+}
+/*リセットcssで消したリストタグ*/
+#about ul {
+  font-size: 18px;
+  margin: 1rem 0;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+
+/*works*/
+#works {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+#works P {
+  font-size: 18px;
+}
+#works div {
+  width: 300px;
+}
+
+#works div:nth-last-of-type(2) {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#works img {
+  width: 300px;
+  padding-bottom: 20px;  
+}
+
+/* TOPに戻るボタン */
+#back-btn {
+  display: inline;
+  padding: 28px 24px;
+  border-radius: 50%;
+  background-color: black;
+  color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  text-decoration: none;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/*footer*/
+footer {
+  text-align: center;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 767px) {
+  #works div {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+}
